@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Medium Freedium Redirector",
+  "version": "1.0",
+  "description": "Automatically redirects Medium articles through Freedium",
+  "icons": {
+    "128": "icon.svg"
+  },
+  "permissions": [
+    "webNavigation",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "*://*.medium.com/*",
+    "https://medium.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  }
+}
